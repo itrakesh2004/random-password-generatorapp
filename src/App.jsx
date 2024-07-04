@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './App.css'
 import { LC, NC, SC, UC } from './data/PassChar';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [UpperCase,setUpperCase]=useState(false);
@@ -24,7 +26,7 @@ let createPassword = () => {
     }
     setpass(finalPass);
   }else{
-    alert("plese fill up data")
+    toast.error("plese fill up data")
   }
 
 }
@@ -34,6 +36,7 @@ let copyPass=()=>{
 }
   return(
     <>
+      <ToastContainer/>
       <div className='passwordBox'>
         <h2>Password gernetor</h2>
         <div className='passwordboxin'>
