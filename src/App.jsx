@@ -25,6 +25,7 @@ let createPassword = () => {
         finalPass +=charSet.charAt(Math.floor(Math.random()*charSet.length))
     }
     setpass(finalPass);
+    toast.success("success generte password")
   }else{
     toast.error("plese fill up data")
   }
